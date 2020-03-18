@@ -633,5 +633,5 @@ pre tt:after {
 }
 
 #___gatsby {
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }

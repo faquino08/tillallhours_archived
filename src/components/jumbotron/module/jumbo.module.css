@@ -13,7 +13,7 @@
 }
 
 :global(.carousel-item):local(.hero1) {
-    height: 85vh;
+    height: 100vh;
     background-image: url("../../../images/teachingswiming (38).jpg");
     background-size: cover;
     background-position: center left 50%;
@@ -21,7 +21,7 @@
 }
 
 :global(.carousel-item):local(.hero2) {
-    height: 85vh;
+    height: 100vh;
     background-image: url("../../../images/teachingswiming (5).jpg");
     background-size: cover;
     background-position: center left 50%;
@@ -29,7 +29,7 @@
 }
 
 :global(.carousel-item):local(.hero3) {
-    height: 85vh;
+    height: 100vh;
     background-image: url("../../../images/teachingswiming (71).jpg");
     background-size: cover;
     background-position: center left 40%;
@@ -42,5 +42,16 @@
         width: 100%;
         left: 0 !important;
         right: 0 !important;
+    }
+    :global .carousel {
+      /*top: calc(-60px - 1rem);
+      margin-bottom: calc(-60px - 1rem);*/
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :global .carousel {
+      /*top: calc(-62px - 2.25rem);
+      margin-bottom: calc(-62px - 2.25rem);*/
     }
 }

@@ -3,9 +3,11 @@
 }
 
 .navblue {
-  background-color: #22313f !important;
+  background-color: transparent !important;
   font-family: sans-serif;
   font-weight: bold;
+  position: fixed;
+  width: 100%;
 }
 
 .navblue .navbar_toggler {
@@ -185,7 +187,7 @@
 
 @media screen and (max-width: 767px) {
   .navblue {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.45);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0);
     width: 100%;
   }
 
