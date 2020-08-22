@@ -34,15 +34,10 @@ const Layout = ({ children }) => {
           maxWidth: 2000,
           padding: `0`,
           paddingTop: 0,
-          position: "relative",
+          position: "static",
         }}
       >
         <main>{children}</main>
-        <footer>
-          <div className="footing">
-            © {new Date().getFullYear()}, Miss Lucy's Swim Academy 
-          </div>
-        </footer>
       </div>
     </>
   )

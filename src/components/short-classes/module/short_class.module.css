@@ -3,6 +3,10 @@
     padding: 0 !important;
     max-width: 2000px !important;
     width: 100%;
+    background-color: #22313f !important;
+}
+.home_classes :global(.row) {
+    margin: 0 !important;
 }
 
 .home_classes :global(.row) :global(.col-md-4.col-12) {
@@ -55,4 +59,30 @@
 .home_classes :global(.row) :global(.col-md-4.col-12) img {
     width: 100%;
     margin-bottom: 2.25rem;
+}
+
+.fP img {
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+
+.lP img {
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .fP img {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+
+    .lP img {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    .para {
+        font-size: 3.5vw !important;
+    }
 }

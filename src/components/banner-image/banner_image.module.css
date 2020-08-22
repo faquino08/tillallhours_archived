@@ -1,0 +1,28 @@
+.banner {
+    width: 100%;
+    height: 45vh;
+    border-radius: 0;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.divider {
+    font-size: 1.5em;
+}
+
+.banner h1 {
+    position: absolute;                  
+    bottom:0;
+}
+
+@media screen and (max-width: 767px) {
+    /*.banner {
+        margin-top: 76px;
+    }*/
+}
+
+@media screen and (min-width: 768px) {
+    /*.banner {
+        margin-top: 102.5px;
+    }*/
+}

@@ -203,7 +203,6 @@
     z-index: 1000;
     background-color: #22313f !important;
     transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1) !important;
-    position: fixed;
   }
 
   :global .collapse:not(:global .show) {

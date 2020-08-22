@@ -28,6 +28,7 @@
 .home_about :global(.row) :global(.col-md-6.col-12) img {
     margin-bottom: 2.25rem !important;
     width: 100%;
+    border-radius: 50%;
 }
 
 .short_btn :local button {
@@ -60,5 +61,9 @@
         position: relative;
         margin-top: 0;
         margin-bottom: 1rem;
+    }
+
+    .para {
+        font-size: 3.5vw !important;
     }
 }

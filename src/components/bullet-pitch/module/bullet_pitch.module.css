@@ -16,8 +16,9 @@
     color: white;
 }
 
-.bullet_pt .svg-inline--fa:hover {
+.bullet_pt :global svg:hover {
     border: none !important;
+    color: white !important;
 }
 
 .col {
@@ -41,18 +42,39 @@
 
 .bullets .row {
     text-align: center;
+    margin-left: auto;
 }
 
 .bullets .row h1 {
-    padding: 0 15px;
     color: white;
     margin-bottom: 0;
     margin-top: 30px;
     font-family: sans-serif;
-    font-size: 3vw;
+    font-size: 7.5vw;
 }
 
 .bullets .row p {
     font-family: sans-serif;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
+}
+
+.animHeading {
+    width: 100%;
+    z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .bullets .row h1 {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .bullets .row h1 {
+        font-size: 7.5vw;
+    }
+
+    .bullets .row p {
+        font-size: 3.5vw;
+    }
 }

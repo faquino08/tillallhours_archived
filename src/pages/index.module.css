@@ -1,0 +1,11 @@
+.parallax {
+    position: relative;
+    z-index: 1000;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+}
