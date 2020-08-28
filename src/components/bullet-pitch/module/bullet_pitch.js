@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from "react"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 import "bootstrap/dist/css/bootstrap.min.css"
 import styles from "./bullet_pitch.module.css"
 import { animated, useSpring, useChain } from "react-spring"
@@ -39,12 +41,12 @@ const BulletPitch = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", function() {
-      handleScroll(ref, "standard", 2, setToggle)
+      handleScroll(ref, "simple", 2, setToggle)
     })
 
     return () => {
       window.removeEventListener("scroll", function() {
-        handleScroll(ref, "standard", 2, setToggle)
+        handleScroll(ref, "simple", 2, setToggle)
       })
     }
   })
@@ -65,7 +67,7 @@ const BulletPitch = () => {
                 output: [1, 0.97, 0.9, 1.1, 0.9, 0.5, 2, 1],
               })
               .interpolate(popUp => `scale(${popUp})`),
-            transform: popUp
+            transform2: popUp
               .interpolate({
                 range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
                 output: [-40, -20, -15, -10, -1, 1, -1, 0],
@@ -73,7 +75,7 @@ const BulletPitch = () => {
               .interpolate(popUp => `translateY(${popUp}em)`),
           }}
         >
-          WE <font color="#cd1e26">ARE: {blToggle}</font>
+          Featured Products:
         </animated.h1>
       </Row>
       <Row className={styles.row}>
@@ -82,11 +84,15 @@ const BulletPitch = () => {
             style={{ transform, opacity }}
             className={styles.bullet_pt}
           >
-            <i
-                className="fas fa-user-friends fa-3x"
-                style={{ color: "white" }}
-            ></i>
-            <p>Family owned and operated.</p>
+            <Card>
+              <Card.Body>
+                <Card.Title className={styles.cardTitle}>Card Title</Card.Title>
+                <Card.Img variant="top" src="holder.js/100px180" />
+                <Button variant="primary" className={styles.cardBtn}>
+                  Add To Cart
+                </Button>
+              </Card.Body>
+            </Card>
           </animated.div>
         </Col>
         <Col xs={12} md={4} className={[styles["bt_2"], styles.col]}>
@@ -94,11 +100,15 @@ const BulletPitch = () => {
             style={{ transform, opacity }}
             className={styles.bullet_pt}
           >
-            <i 
-                className="fas fa-users fa-3x" 
-                style={{ color: "white" }}
-            ></i>
-            <p>Committed to keeping class sizes small.</p>
+            <Card>
+              <Card.Body>
+                <Card.Title className={styles.cardTitle}>Card Title</Card.Title>
+                <Card.Img variant="top" src="holder.js/100px180" />
+                <Button variant="primary" className={styles.cardBtn}>
+                  Add To Cart
+                </Button>
+              </Card.Body>
+            </Card>
           </animated.div>
         </Col>
         <Col xs={12} md={4} className={[styles["bt_3"], styles.col]}>
@@ -106,11 +116,15 @@ const BulletPitch = () => {
             style={{ transform, opacity }}
             className={styles.bullet_pt}
           >
-            <i
-                className="fas fa-swimmer fa-3x"
-                style={{ color: "white" }}
-            ></i>
-            <p>Dedicated to your progress and growth.</p>
+            <Card>
+              <Card.Body>
+                <Card.Title className={styles.cardTitle}>Card Title</Card.Title>
+                <Card.Img variant="top" src="holder.js/100px180" />
+                <Button variant="primary" className={styles.cardBtn}>
+                  Add To Cart
+                </Button>
+              </Card.Body>
+            </Card>
           </animated.div>
         </Col>
       </Row>

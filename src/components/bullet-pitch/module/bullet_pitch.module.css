@@ -78,3 +78,21 @@
         font-size: 3.5vw;
     }
 }
+
+.cardTitle {
+    color: black;
+}
+
+.cardBtn {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    position: relative;
+    top: -1.25rem;
+    width: 100%;
+}
+
+.bullet_pt:hover .cardBtn {
+    visibility: visible;
+    opacity: 1;
+}

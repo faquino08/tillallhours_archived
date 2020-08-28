@@ -9,7 +9,7 @@ import teaswh2 from "../../../images/teachingswiming (50).jpg"
 import teaswh3 from "../../../images/teachingswiming (89).jpg"
 import { Link } from "gatsby"
 import { animated, useSpring, useChain } from "react-spring"
-import { layoutGenerator } from "react-break"
+//import { layoutGenerator } from "react-break"
 import { handleScroll } from "../../../services/scroll.js"
 
 const QuickClasses = () => {

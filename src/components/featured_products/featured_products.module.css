@@ -1,0 +1,114 @@
+.bullets {
+  margin: 0;
+  padding: 2rem 0;
+  overflow: hidden !important;
+  width: 100%;
+  max-width: 2000px;
+  background-color: #22313f;
+  overflow-x: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.carousel_prev,
+.carousel_next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.carousel_prev {
+  left: 0;
+}
+
+.carousel_next {
+  right: 0;
+}
+
+.carousel_next:focus,
+.carousel_next:hover,
+.carousel_prev:focus,
+.carousel_prev:hover {
+  color: #fff !important;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9 !important;
+}
+
+:global(.fa-chevron-right),
+:global(.fa-chevron-left) {
+  color: #fff !important;
+}
+
+.inner {
+  overflow: hidden;
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: row !important;
+}
+
+.card {
+  flex-direction: row !important;
+  min-width: 25vw;
+}
+
+.cardTitle {
+  color: black;
+  position: absolute;
+  margin-left: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.cardBtn {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  position: relative;
+  bottom: 10%;
+  top: auto;
+  width: 100%;
+  background-color: black;
+  border: black;
+}
+
+.cardBtn:hover {
+  background-color: black;
+  border: black;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin: 0 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 25vw !important;
+    height: 34.1vw !important;
+  }
+
+  .bullets,
+  .carousel_next,
+  .carousel_prev {
+    height: calc(34.1vw + 4rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+.card:hover .cardBtn {
+  visibility: visible;
+  opacity: 1;
+}

@@ -2,6 +2,8 @@ import React from "react"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./bullet_pitch.css"
 
@@ -14,10 +16,13 @@ const bulletPitch = () => (
     </Row>
     <Row>
       <Col xs={12} md={4} className="bt_1">
-        <div className="bullet_pt bt_1">
-          <i class="fas fa-user-friends fa-3x" style={{ color: "white" }}></i>
-          <p>Family owned and operated.</p>
-        </div>
+        <Card>
+          <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Img variant="top" src="holder.js/100px180" />
+          </Card.Body>
+          <Button variant="primary">Go somewhere</Button>
+        </Card>
       </Col>
       <Col xs={12} md={4} className="bt_2">
         <div className="bullet_pt">

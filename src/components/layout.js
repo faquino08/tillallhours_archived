@@ -10,9 +10,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 //import Header from "./header/header"
-import Header2 from "./header/module/header"
+import Header2 from "./header/header"
 import "./layout.css"
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+//import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
