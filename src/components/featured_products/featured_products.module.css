@@ -3,7 +3,7 @@
   padding: 2rem 0;
   overflow: hidden !important;
   width: 100%;
-  max-width: 2000px;
+  max-width: 20000px;
   background-color: #22313f;
   overflow-x: auto;
   justify-content: center;
@@ -86,9 +86,52 @@
   border: black;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 576px) {
   .card {
     margin: 0 0.5rem;
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+    min-height: 105vw !important;
+    max-height: 105vw !important;
+  }
+
+  .carousel_next,
+  .carousel_prev {
+    height: calc(105vw + 4rem);
+  }
+
+  .carousel_next > :global(.svg-inline--fa),
+  .carousel_prev > :global(.svg-inline--fa) {
+    height: 1.5rem;
+  }
+  
+  .carousel_next > :global(.svg-inline--fa) {
+    margin-right: 1rem !important;
+  }
+
+  .carousel_prev > :global(.svg-inline--fa) {
+    margin-left: 1rem !important;
+  }
+
+  .cardBtn {
+    bottom: 20%;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .card {
+    margin: 0 0.5rem;
+    width: 30vw !important;
+    height: 40.92vw !important;
+  }
+
+  .carousel_next,
+  .carousel_prev {
+    height: calc(40.92vw + 4rem);
+  }
+
+  .cardBtn {
+    bottom: 20%;
   }
 }
 
@@ -102,6 +145,10 @@
   .carousel_next,
   .carousel_prev {
     height: calc(34.1vw + 4rem);
+  }
+
+  .cardBtn {
+    bottom: 15%
   }
 }
 
