@@ -1,8 +1,8 @@
 .home_classes.container {
-    margin: 0 !important;
     padding: 0 !important;
     max-width: 2000px !important;
     width: 100%;
+    margin: auto !important;
 }
 
 .home_classes.container .row .col-md-4.col-12 {

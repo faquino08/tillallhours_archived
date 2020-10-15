@@ -23,7 +23,7 @@ const quickAboutUs = () => (
         </p>
         <div className="short_btn">
           <Button variant="outline-primary" >
-            <Link to="/">About Us</Link>
+            <Link to="/about">About Us</Link>
           </Button>
         </div>
       </Col>

@@ -40,9 +40,13 @@ const BulletPitch = () => {
   useChain(blToggle ? [headingRef, bodyRef] : [bodyRef, headingRef])
 
   useEffect(() => {
-    window.addEventListener("scroll", function() {
-      handleScroll(ref, "simple", 2, setToggle)
-    })
+    window.addEventListener(
+      "scroll",
+      function() {
+        handleScroll(ref, "simple", 2, setToggle)
+      },
+      { passive: true }
+    )
 
     return () => {
       window.removeEventListener("scroll", function() {
@@ -87,7 +91,7 @@ const BulletPitch = () => {
             <Card>
               <Card.Body>
                 <Card.Title className={styles.cardTitle}>Card Title</Card.Title>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" /*src="holder.js/100px180"*/ />
                 <Button variant="primary" className={styles.cardBtn}>
                   Add To Cart
                 </Button>
@@ -103,7 +107,7 @@ const BulletPitch = () => {
             <Card>
               <Card.Body>
                 <Card.Title className={styles.cardTitle}>Card Title</Card.Title>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" /*src="holder.js/100px180"*/ />
                 <Button variant="primary" className={styles.cardBtn}>
                   Add To Cart
                 </Button>
@@ -119,7 +123,7 @@ const BulletPitch = () => {
             <Card>
               <Card.Body>
                 <Card.Title className={styles.cardTitle}>Card Title</Card.Title>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" /*src="holder.js/100px180"*/ />
                 <Button variant="primary" className={styles.cardBtn}>
                   Add To Cart
                 </Button>

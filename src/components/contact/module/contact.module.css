@@ -1,9 +1,15 @@
 .home_contact.container {
     background-color: white !important;
-    padding: 0;
+    width: 100%;
+    max-width: none !important;
+}
+
+.conRow {
     max-width: 2000px;
+    padding: 0;
     padding: 1rem 0;
     position: relative;
+    margin: auto;
 }
 
 .row {

@@ -1,9 +1,9 @@
 .home_classes {
-    margin: 0 !important;
+    margin: auto !important;
     padding: 0 !important;
     max-width: 2000px !important;
     width: 100%;
-    background-color: #22313f !important;
+    background-color: white !important;
 }
 .home_classes :global(.row) {
     margin: 0 !important;

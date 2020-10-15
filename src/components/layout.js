@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState, } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -14,7 +14,7 @@ import Header2 from "./header/header"
 import "./layout.css"
 //import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
-const Layout = ({ children }) => {
+function Layout({ children, loc }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,22 +25,21 @@ const Layout = ({ children }) => {
     }
   `)
 
-  return (
-    <>
-      <Header2 />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 2000,
-          padding: `0`,
-          paddingTop: 0,
-          position: "static",
-        }}
-      >
+  if (loc == "/") {
+    return (
+      <>
+        <Header2 home={true} />
         <main>{children}</main>
-      </div>
-    </>
-  )
+      </>
+    )
+  } else {
+    return (
+      <>
+        <Header2 home={false} />
+        <main className="nonHomeMain">{children}</main>
+      </>
+    )
+  }
 }
 
 Layout.propTypes = {

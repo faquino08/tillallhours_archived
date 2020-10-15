@@ -7,53 +7,53 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="logo-wht.svg"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 10.583338 1.2699553"
+   width="40.000019"
    height="4.7998314"
-   width="40.000019">
+   viewBox="0 0 10.583338 1.2699553"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="logo_wht.svg">
   <defs
      id="defs2">
     <rect
-       x="295.77701"
-       y="15.456862"
-       width="312.20834"
+       id="rect21"
        height="12.095238"
-       id="rect21" />
+       width="312.20834"
+       y="15.456862"
+       x="295.77701" />
     <rect
-       id="rect30"
-       height="73.327377"
-       width="209.3988"
+       x="-0.75595236"
        y="0"
-       x="-0.75595236" />
+       width="209.3988"
+       height="73.327377"
+       id="rect30" />
   </defs>
   <sodipodi:namedview
-     units="px"
-     inkscape:window-maximized="0"
-     inkscape:window-y="449"
-     inkscape:window-x="0"
-     inkscape:window-height="943"
-     inkscape:window-width="1252"
-     showgrid="true"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
-     inkscape:document-units="px"
-     inkscape:cy="-31.981407"
-     inkscape:cx="7.7510269"
-     inkscape:zoom="6.5639512"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
+     id="base"
      pagecolor="#ffffff"
-     id="base">
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.5639512"
+     inkscape:cx="7.7510269"
+     inkscape:cy="-31.981407"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1440"
+     inkscape:window-height="900"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     units="px">
     <inkscape:grid
-       originy="-1.2714143"
-       originx="-0.70874161"
+       type="xygrid"
        id="grid1022"
-       type="xygrid" />
+       originx="-0.70874161"
+       originy="-1.2714143" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -63,35 +63,35 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-12.247646,-2.3651816)"
-     id="layer1"
+     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     inkscape:label="Layer 1">
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58329999999999949px;line-height:1.25;font-family:Gruppo;-inkscape-font-specification:'Gruppo, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect30);fill:#000000;fill-opacity:1;stroke:none;"
-       id="text28"
-       xml:space="preserve" />
-    <text
-       id="text36"
-       y="3.6238384"
-       x="12.169686"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.31394px;line-height:1.25;font-family:Gruppo;-inkscape-font-specification:'Gruppo, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0723103;stroke-miterlimit:4;stroke-dasharray:none"
-       xml:space="preserve"><tspan
-         dy="0 0 0 0 0 0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.31394px;font-family:Gruppo;-inkscape-font-specification:'Gruppo, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.0723103;stroke-miterlimit:4;stroke-dasharray:none"
-         y="3.6238384"
-         x="12.169686"
-         id="tspan34"
-         sodipodi:role="line"
-         rotate="0 0 0 0 0 0 0 0 0 0 0 0 0">tillallhours</tspan></text>
+     id="layer1"
+     transform="translate(-12.247646,-2.3651816)">
     <text
        xml:space="preserve"
+       id="text28"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58329999999999949px;line-height:1.25;font-family:Gruppo;-inkscape-font-specification:'Gruppo, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect30);fill:#000000;fill-opacity:1;stroke:none;" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.31394px;line-height:1.25;font-family:Gruppo;-inkscape-font-specification:'Gruppo, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0723103;stroke-miterlimit:4;stroke-dasharray:none"
+       x="12.169686"
+       y="3.6238384"
+       id="text36"><tspan
+         rotate="0 0 0 0 0 0 0 0 0 0 0 0 0"
+         sodipodi:role="line"
+         id="tspan34"
+         x="12.169686"
+         y="3.6238384"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.31394px;font-family:Gruppo;-inkscape-font-specification:'Gruppo, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.0723103;stroke-miterlimit:4;stroke-dasharray:none"
+         dy="0 0 0 0 0 0">tillallhours</tspan></text>
+    <text
+       style="font-style:normal;font-weight:normal;font-size:10.58329999999999949px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect21);fill:#000000;fill-opacity:1;stroke:none;"
        id="text19"
-       style="font-style:normal;font-weight:normal;font-size:10.58329999999999949px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect21);fill:#000000;fill-opacity:1;stroke:none;" />
+       xml:space="preserve" />
   </g>
 </svg>

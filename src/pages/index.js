@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 //import Jumb from "../components/jumbotron/jumbo.js"
 import Jumb2 from "../components/jumbotron/module/jumbo.js"
-//import BulletPitch from "../components/bullet-pitch/bullet_pitch.js"
-import BulletPitch2 from "../components/featured_products/featured_products.js"
+import BulletPitch from "../components/bullet-pitch/bullet_pitch.js"
+import FeaturedProducts from "../components/featured_products/featured_products.js"
 //import Short_About from "../components/short-about/short_about.js"
 import Short_About2 from "../components/short-about/module/short_about.js"
 import Short_Classes2 from "../components/short-classes/module/short_class.js"
@@ -17,12 +17,13 @@ import styles from "./index.module.css"
 //import { layoutGenerator } from "react-break"
 import { handleScroll, parallaxMultiplier } from "../services/scroll.js"
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   const containerRef = useRef(null);
   const footerRef = useRef(null);
   const [{ offset }, setPara] = useSpring(() => ({ offset: 0 }));
   const [paraMulti, setMulti] = useState(0.1);
-  
+  const path = location.pathname
+
   useEffect(() => {
     window.addEventListener("scroll", function() {
       handleScroll(containerRef, "parallax", 0, setPara)
@@ -44,19 +45,19 @@ const IndexPage = () => {
       }
     }
 
-    return () => {
-      window.removeEventListener("scroll", function() {
-        handleScroll(containerRef, "parallax", 0, setPara)
-      });
+    return async () => {
       window.removeEventListener("resize", function() {
         parallaxMultiplier(containerRef, footerRef, setMulti)
       })
+      window.removeEventListener("scroll", function() {
+        handleScroll(containerRef, "parallax", 0, setPara)
+      });
     };
   });
 
   return (
     <div ref={containerRef}>
-      <Layout>
+      <Layout loc={`${path}`}>
         <SEO title="Home" />
         <Jumb2 />
         <animated.div
@@ -65,17 +66,27 @@ const IndexPage = () => {
             transform: offset.interpolate(
               o => `translateY(${o * paraMulti}px)`
             ),
+            WebkitTransform: offset.interpolate(
+              o => `translateY(${o * paraMulti}px)`
+            ),
+            MozTransform: offset.interpolate(
+              o => `translateY(${o * paraMulti}px)`
+            ),
+            OTransform: offset.interpolate(
+              o => `translateY(${o * paraMulti}px)`
+            ),
           }}
         >
-          <BulletPitch2 />
+          <BulletPitch />
+          <FeaturedProducts />
           <Short_About2 />
-          <Short_Classes2 />
+          {/*<Short_Classes2 />*/}
         </animated.div>
         <div className={styles.bottom} ref={footerRef}>
-          <Contact_Form2 />
+          {/*<Contact_Form2 />*/}
           <footer>
             <div className="footing">
-              © {new Date().getFullYear()}, Miss Lucy's Swim Academy
+              © {new Date().getFullYear()}, tillallhours Candle Co.
             </div>
           </footer>
         </div>

@@ -4,6 +4,9 @@
     border-radius: 0;
     position: relative;
     overflow-y: hidden;
+    padding: 0;
+    background-color: black;
+    z-index: 1;
 }
 
 .divider {
@@ -13,6 +16,8 @@
 .banner h1 {
     position: absolute;                  
     bottom:0;
+    z-index: 10;
+    color: white;
 }
 
 @media screen and (max-width: 767px) {

@@ -5,9 +5,12 @@ import Jumbotron from "react-bootstrap/Jumbotron"
 
 const BannerImage = (props) => (
     <Jumbotron className={styles.banner}>
-        <h1>
-            <b className={styles.divider}>|</b>{props.title}
-        </h1>     
+        <div>
+            <h1>
+                <b className={styles.divider}>|</b>{props.title}
+            </h1>     
+        </div>
+        {props.children}
     </Jumbotron>
 )
 

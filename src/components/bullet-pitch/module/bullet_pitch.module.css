@@ -3,7 +3,7 @@
     padding: 0;
     width: 100%;
     max-width: 2000px;
-    background-color: #22313f;
+    background-color: #ececec;
 }
 
 .row {
@@ -36,7 +36,7 @@
     padding-bottom: 2.5rem;
 }
 
-.bt_1, .bt_2, .bt_3 {
+.bt {
     margin: 0;
 }
 
@@ -71,11 +71,11 @@
 
 @media screen and (max-width: 767px) {
     .bullets .row h1 {
-        font-size: 7.5vw;
+        font-size: 21px;
     }
 
     .bullets .row p {
-        font-size: 3.5vw;
+        font-size: 16px;
     }
 }
 

@@ -33,6 +33,33 @@ module.exports = {
         dest: "http://cms.quoainfrank.com",
       },
     },
+    {
+      resolve: `gatsby-plugin-snipcart-advanced`,
+        options: {
+            version: '3.0.15',
+            publicApiKey: 'MjkwYzRkNjItYjdkNC00OTkzLWJiMGQtYzcwYzJmMTFjZDczNjM3MzM2NzA4NjYxNTE0MjE1', // use public api key here or in environment variable
+            defaultLang: 'en',
+            currency: 'usd',
+            openCartOnAdd: true,
+            locales: {
+              en: {
+                actions: {
+                  checkout: 'Place Order',
+                },
+              }
+            },
+            innerHTML: `
+            <billing section="bottom">
+                <!-- Customization goes here -->
+            </billing>`,
+      },
+    },
+    /*{
+      resolve: 'gatsby-plugin-snipcart',
+        options: {
+          apiKey: 'MjkwYzRkNjItYjdkNC00OTkzLWJiMGQtYzcwYzJmMTFjZDczNjM3MzM2NzA4NjYxNTE0MjE1'
+        }
+    }*/
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

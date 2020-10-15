@@ -8,10 +8,6 @@ import Carousel from "react-bootstrap/Carousel"
 const Jumb = () => (
   <Carousel fade="true">
     <Carousel.Item className={`${styles.hero1}`}>
-      <Carousel.Caption className={`${styles.caption1} mb-0`}>
-        <h3>Lorem Ipsum</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </Carousel.Caption>
     </Carousel.Item>
   </Carousel>
 )

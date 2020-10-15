@@ -1,58 +1,23 @@
 .bullets {
-  margin: 0;
+  margin: auto;
   padding: 2rem 0;
   overflow: hidden !important;
   width: 100%;
-  max-width: 20000px;
-  background-color: #22313f;
+  max-width: 2000px;
+  background-color: #faf9f9;
   overflow-x: auto;
   justify-content: center;
   display: flex;
 }
 
-.carousel_prev,
-.carousel_next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 7.5%;
-  color: #fff;
-  text-align: center;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
-}
-
-.carousel_prev {
-  left: 0;
-}
-
-.carousel_next {
-  right: 0;
-}
-
-.carousel_next:focus,
-.carousel_next:hover,
-.carousel_prev:focus,
-.carousel_prev:hover {
-  color: #fff !important;
-  text-decoration: none;
-  outline: 0;
-  opacity: 0.9 !important;
-}
-
-:global(.fa-chevron-right),
-:global(.fa-chevron-left) {
-  color: #fff !important;
+.carousel .slide {
+  background: transparent;
 }
 
 .inner {
   overflow: hidden;
-  width: 85%;
-  height: 100%;
+  /*width: 85%;*/
+  max-width: 2000px;
   display: flex;
   flex-direction: row !important;
 }
@@ -60,6 +25,7 @@
 .card {
   flex-direction: row !important;
   min-width: 25vw;
+  background:linear-gradient(#D9B282 0,white,white,transparent 100%);
 }
 
 .cardTitle {
@@ -73,36 +39,23 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
-  position: relative;
-  bottom: 10%;
+  position: -webkit-sticky;
+  position: absolute;
+  bottom: 2.5%;
   top: auto;
-  width: 100%;
-  background-color: black;
-  border: black;
+  left: 1.25rem;
+  width: calc(100% - 2.5rem);
+  margin-bottom: 0rem !important;
 }
 
-.cardBtn:hover {
-  background-color: black;
-  border: black;
+.cardImg {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 576px) {
   .card {
     margin: 0 0.5rem;
-    min-width: 80vw !important;
-    max-width: 80vw !important;
-    min-height: 105vw !important;
-    max-height: 105vw !important;
-  }
-
-  .carousel_next,
-  .carousel_prev {
-    height: calc(105vw + 4rem);
-  }
-
-  .carousel_next > :global(.svg-inline--fa),
-  .carousel_prev > :global(.svg-inline--fa) {
-    height: 1.5rem;
   }
   
   .carousel_next > :global(.svg-inline--fa) {
@@ -112,26 +65,40 @@
   .carousel_prev > :global(.svg-inline--fa) {
     margin-left: 1rem !important;
   }
-
-  .cardBtn {
-    bottom: 20%;
-  }
 }
 
 @media screen and (min-width: 577px) {
   .card {
     margin: 0 0.5rem;
-    width: 30vw !important;
-    height: 40.92vw !important;
   }
 
   .carousel_next,
   .carousel_prev {
     height: calc(40.92vw + 4rem);
   }
+}
 
-  .cardBtn {
-    bottom: 20%;
+
+@media screen and (max-width: 1023px) {
+  .card {
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+    min-height: 95vw !important;
+    max-height: 95vw !important;
+  }
+
+  .carousel_next,
+  .carousel_prev {
+    height: calc(95vw + 4rem);
+  }
+
+  .carousel_next > :global(.svg-inline--fa),
+  .carousel_prev > :global(.svg-inline--fa) {
+    width: 100%;
+  }
+
+  .inner {
+    height: calc(95vw + 30px);
   }
 }
 
@@ -147,8 +114,13 @@
     height: calc(34.1vw + 4rem);
   }
 
-  .cardBtn {
-    bottom: 15%
+  .carousel_next > :global(.svg-inline--fa),
+  .carousel_prev > :global(.svg-inline--fa) {
+    width: 100%;
+  }
+
+  .inner {
+    height: calc(34.1vw + 30px);
   }
 }
 

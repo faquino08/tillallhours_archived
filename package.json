@@ -5,8 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "axios": "^0.20.0",
     "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
     "gatsby": "^2.24.47",
     "gatsby-cli": "^2.12.99",
     "gatsby-image": "^2.2.34",
@@ -14,9 +16,11 @@
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.6.36",
+    "gatsby-plugin-snipcart": "^1.1.2",
+    "gatsby-plugin-snipcart-advanced": "^1.0.1",
     "gatsby-source-directus": "0.0.44",
-    "gatsby-source-filesystem": "^2.1.40",
-    "gatsby-transformer-sharp": "^2.4.3",
+    "gatsby-source-filesystem": "^2.3.30",
+    "gatsby-transformer-sharp": "^2.5.15",
     "holderjs": "^2.9.7",
     "popper.js": "^1.16.0",
     "prop-types": "^15.7.2",
@@ -27,6 +31,7 @@
     "react-helmet": "^5.2.1",
     "react-iframe": "^1.8.0",
     "react-media": "^1.10.0",
+    "react-responsive-carousel": "^3.2.10",
     "react-spring": "^8.0.27"
   },
   "devDependencies": {

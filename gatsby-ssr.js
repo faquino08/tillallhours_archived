@@ -7,8 +7,8 @@
 // You can delete this file if you're not using it
 import React from "react"
 
-export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
+/*export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   setHeadComponents([
     <script src="holder.js"></script>,
   ])
-}
+}*/

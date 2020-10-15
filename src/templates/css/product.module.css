@@ -1,0 +1,71 @@
+.descSection {
+    box-sizing: border-box;
+    padding-top: 24px;
+    border-top: 1px solid rgb(216, 211, 200);
+    margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .mainSection {
+        padding: 20px 40px !important;
+        background-color: #faf9f9;
+    }
+
+    .infoSection {
+        padding: 0px 36px !important;
+    }
+
+    .imageSection {
+        height: calc(100vh - 70px);
+    }
+}
+
+.collName {
+    font-style: italic;
+}
+
+.otherColor {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1;
+}
+
+.firstColor {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0;
+}
+
+.buyBtn {
+    margin-bottom: 1.45rem;
+    background-color: black !important;
+    border-color: black !important;
+}
+
+.accordion {
+    border-collapse: collapse !important;
+}
+
+.accordionHeader:first {
+    border-top: 1px solid rgba(0,0,0,.125) !important;
+}
+
+.accordionHeader {
+    border-bottom: 1px solid rgba(0,0,0,.125) !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+.accordionBtn {
+    width: 100% !important;
+}
