@@ -291,6 +291,10 @@
     height: 45px !important;
   }
 
+  .navbar-brand {
+    top: 5px !important;
+  }
+
   .navbar-brand div {
     top: 0 !important;
   }

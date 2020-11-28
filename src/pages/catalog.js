@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useLayoutEffect, useState } from "react"
 import { Link } from "gatsby"
 import { chunk } from 'lodash'
 import { useStaticQuery, graphql } from "gatsby"
@@ -15,6 +15,39 @@ import Button from "react-bootstrap/Button"
 import catalogGenerator from "../services/cms/directus/candleIntegrator"
 
 function CatalogPage() {
+    const [gridNum, setGridNum] = useState(2)
+
+    useLayoutEffect(() => {
+      if (typeof window !== undefined) {
+        window.addEventListener("resize", function() {
+          if (window.innerWidth >= 992) {
+            setGridNum(4)
+          } else {
+            setGridNum(2)
+          }
+        })
+        if (window.innerWidth >= 992) {
+          setGridNum(4)
+        } else {
+          setGridNum(2)
+        }
+      } else {
+        setGridNum(2)
+      }
+
+      return () => {
+        if (typeof window !== undefined) {
+          window.addEventListener("resize", function() {
+            if (window.innerWidth >= 992) {
+              setGridNum(4)
+            } else {
+              setGridNum(2)
+            }
+          })
+        }
+      }
+    })
+
     const data = useStaticQuery(graphql`
       query CatalogPage {
         allCatalogPage {
@@ -95,18 +128,37 @@ function CatalogPage() {
       }
     `)
 
-    const rows = chunk(generateProductCards(data), 3)
     const outdoorCollection = chunk(
       generateCollectionProductCards("Outdoor Living", data),
-      3
+      gridNum
     )
     const moodCollection = chunk(
       generateCollectionProductCards("Mood", data),
-      3
+      gridNum
     )
     const discoverCollection = chunk(
       generateCollectionProductCards("Discovery Set", data),
-      3
+      gridNum
+    )
+    const homeNight = chunk(
+      generateCategoryProductCards("Home Living", "A Nightcap"),
+      gridNum
+    )
+    const homeTravel = chunk(
+      generateCategoryProductCards("Home Living", "Our Travels"),
+      gridNum
+    )
+    const homeUnwind = chunk(
+      generateCategoryProductCards("Home Living", "Unwind Or"),
+      gridNum
+    )
+    const homeCore = chunk(
+      generateCategoryProductCards("Home Living", "At Our Core"),
+      gridNum
+    )
+    const homeInspiring = chunk(
+      generateCategoryProductCards("Home Living", "Keep Inspiring"),
+      gridNum
     )
 
     const [test, setTest] = useState(
@@ -123,7 +175,7 @@ function CatalogPage() {
           back={"gray"}
           height={37.5}
         />
-        <Container>
+        <Container className={styles.cont}>
           <Banner
             title={`${data.allCatalogPage.nodes[0].location}`}
             imageData={
@@ -133,9 +185,7 @@ function CatalogPage() {
             back={"black"}
             height={30}
           />
-          <Container
-            style={{ width: "85%", marginLeft: "auto", marginRight: "auto" }}
-          >
+          <Container className={styles.cont2}>
             <Banner
               title={`${data.allCatalogPage.nodes[1].location}`}
               imageData={
@@ -145,13 +195,10 @@ function CatalogPage() {
               back={"black"}
               height={20}
             />
-            {chunk(
-              generateCategoryProductCards("Home Living", "A Nightcap"),
-              3
-            ).map(cols => (
+            {homeNight.map(cols => (
               <Row>
                 {cols.map(col => (
-                  <Col sm={12} md={4} className={styles.cardCol}>
+                  <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                     {col}
                   </Col>
                 ))}
@@ -166,13 +213,10 @@ function CatalogPage() {
               back={"black"}
               height={20}
             />
-            {chunk(
-              generateCategoryProductCards("Home Living", "Our Travels"),
-              3
-            ).map(cols => (
+            {homeTravel.map(cols => (
               <Row>
                 {cols.map(col => (
-                  <Col sm={12} md={4} className={styles.cardCol}>
+                  <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                     {col}
                   </Col>
                 ))}
@@ -187,13 +231,10 @@ function CatalogPage() {
               back={"black"}
               height={20}
             />
-            {chunk(
-              generateCategoryProductCards("Home Living", "Unwind Or"),
-              3
-            ).map(cols => (
+            {homeUnwind.map(cols => (
               <Row>
                 {cols.map(col => (
-                  <Col sm={12} md={4} className={styles.cardCol}>
+                  <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                     {col}
                   </Col>
                 ))}
@@ -208,13 +249,10 @@ function CatalogPage() {
               back={"black"}
               height={20}
             />
-            {chunk(
-              generateCategoryProductCards("Home Living", "At Our Core"),
-              3
-            ).map(cols => (
+            {homeCore.map(cols => (
               <Row>
                 {cols.map(col => (
-                  <Col sm={12} md={4} className={styles.cardCol}>
+                  <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                     {col}
                   </Col>
                 ))}
@@ -229,13 +267,10 @@ function CatalogPage() {
               back={"black"}
               height={20}
             />
-            {chunk(
-              generateCategoryProductCards("Home Living", "Keep Inspiring"),
-              3
-            ).map(cols => (
+            {homeInspiring.map(cols => (
               <Row>
                 {cols.map(col => (
-                  <Col sm={12} md={4} className={styles.cardCol}>
+                  <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                     {col}
                   </Col>
                 ))}
@@ -245,7 +280,7 @@ function CatalogPage() {
             {discoverCollection.map(cols => (
               <Row>
                 {cols.map(col => (
-                  <Col sm={12} md={4} className={styles.cardCol}>
+                  <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                     {col}
                   </Col>
                 ))}
@@ -264,7 +299,7 @@ function CatalogPage() {
           {outdoorCollection.map(cols => (
             <Row>
               {cols.map(col => (
-                <Col sm={12} md={4} className={styles.cardCol}>
+                <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                   {col}
                 </Col>
               ))}
@@ -282,7 +317,7 @@ function CatalogPage() {
           {moodCollection.map(cols => (
             <Row>
               {cols.map(col => (
-                <Col sm={12} md={4} className={styles.cardCol}>
+                <Col sm={12} md={6} lg={3} className={styles.cardCol}>
                   {col}
                 </Col>
               ))}
@@ -460,7 +495,6 @@ function generateCategoryProductCards(collection, category) {
     var label = node.label_color
     var name = node.name
     var cat = node.category
-    console.log(cat)
     node.sizes.forEach(size => {
       if ( category === cat) {
         productCards.push(

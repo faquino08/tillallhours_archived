@@ -84,7 +84,11 @@
 
 @media screen and (max-width: 767px) {
     .infoSection {
-        padding: 12px 0 !important;
+        padding: 0 15px !important;
+    }
+
+    .infoSection button {
+        width: 100%;
     }
 }
 
