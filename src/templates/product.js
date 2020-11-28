@@ -187,7 +187,7 @@ export default function ProductPage({ location, data }) {
         data-item-id={`${product.edges[0].node.id}-${productOptions.size}`}
         data-item-name={product.edges[0].node.name}
         data-item-price={parseFloat(printPrice(data)[0])}
-        data-item-url={`https://tillallhours.nicmaiarana.workers.dev/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
+        data-item-url={`https://tillallhours.com/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
         data-item-weight={productOptions.weight}
         data-item-custom1-name="Size"
         data-item-custom1-options={printSnipOptions(
@@ -224,7 +224,7 @@ export default function ProductPage({ location, data }) {
         data-item-id={`${product.edges[0].node.id}-${productOptions.size}`}
         data-item-name={product.edges[0].node.name}
         data-item-price={parseFloat(printPrice(data)[0])}
-        data-item-url={`https://tillallhours.nicmaiarana.workers.dev/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
+        data-item-url={`https://tillallhours.com/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
         data-item-weight={productOptions.weight}
         data-item-custom1-name="Size"
         data-item-custom1-options={printSnipOptions(

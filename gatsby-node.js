@@ -551,7 +551,7 @@ exports.onPostBuild = async ({ graphql }) => {
         const data = {
           id: `${node.id}-${node.sizes[j].size_id}`,
           price: node.sizes[j].price,
-          url: `https://tillallhours.nicmaiarana.workers.dev/products/${node.sizes[j].slug}.json`,
+          url: `https://tillallhours.com/products/${node.sizes[j].slug}.json`,
           dimensions: {
             weight: node.sizes[j].weight,
           },

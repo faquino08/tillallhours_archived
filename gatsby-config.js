@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `tillallhours`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `tillallhours `,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,20 +35,21 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-snipcart-advanced`,
-        options: {
-            version: '3.0.15',
-            publicApiKey: 'MjkwYzRkNjItYjdkNC00OTkzLWJiMGQtYzcwYzJmMTFjZDczNjM3MzM2NzA4NjYxNTE0MjE1', // use public api key here or in environment variable
-            defaultLang: 'en',
-            currency: 'usd',
-            openCartOnAdd: true,
-            locales: {
-              en: {
-                actions: {
-                  checkout: 'Place Order',
-                },
-              }
+      options: {
+        version: "3.0.15",
+        publicApiKey:
+          "ZTljNGRlMjEtYTMyNS00YmJkLWI4MWEtYmZiMTIwNmQ4M2MxNjM3MzM2NzA4NjYxNTE0MjE1", // use public api key here or in environment variable
+        defaultLang: "en",
+        currency: "usd",
+        openCartOnAdd: true,
+        locales: {
+          en: {
+            actions: {
+              checkout: "Place Order",
             },
-            innerHTML: `
+          },
+        },
+        innerHTML: `
             <billing section="bottom">
                 <!-- Customization goes here -->
             </billing>`,
