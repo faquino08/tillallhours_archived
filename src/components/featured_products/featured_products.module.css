@@ -1,6 +1,6 @@
 .bullets {
   margin: auto;
-  padding: 2rem 0;
+  padding: 0 0;
   overflow: hidden !important;
   width: 100%;
   max-width: 2000px;
@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.carousel .slide {
+:global(.carousel) :global(.slide) {
   background: transparent;
 }
 
@@ -20,19 +20,66 @@
   max-width: 2000px;
   display: flex;
   flex-direction: row !important;
+  /*padding: 0 0;
+  margin: 0.1rem 0 1rem;*/
+}
+
+:global(.control-arrow), :global(.control-prev), :global(.control-next) {
+  opacity: 0.9 !important;
+}
+
+:global(.control-prev)::before, :global(.control-next)::before {
+  border-left-color: rgb(156, 155, 154) !important;
+  border-right-color: rgb(156, 155, 154) !important;
 }
 
 .card {
   flex-direction: row !important;
   min-width: 25vw;
-  background:linear-gradient(#D9B282 0,white,white,transparent 100%);
+  display: flex;
+  overflow: hidden;
 }
 
 .cardTitle {
   color: black;
+  width: 100%;
   position: absolute;
-  margin-left: 0.25rem;
-  margin-top: 0.25rem;
+  left: 0;
+  padding: 0.25rem 1.25rem;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.cardPrice {
+  color: black;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.25rem 1.25rem;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.cardPrice h6 {
+  margin-top: 26px;
+  display: inline-block;
+  width: 100%;
+  text-align: end;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.cardTitle h4 {
+  display: inline-block;
+  width: 65%;
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  margin-bottom: 0 !important;
+}
+
+.cardTitle h6 {
+  display: inline-block;
+  width: 35%;
+  text-align: end;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  vertical-align: top;
 }
 
 .cardBtn {
@@ -50,12 +97,35 @@
 
 .cardImg {
   height: 100%;
-  width: 100%;
+  margin: 0 auto;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-radius: 0 !important;
+}
+
+.cardImg2 {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  transition: .5s ease;
+  z-index: 0;
+  padding: inherit;
+}
+
+.card:hover .cardImg2 {
+  width: 100% !important;
+  left: 0 !important;
 }
 
 @media screen and (max-width: 576px) {
   .card {
-    margin: 0 0.5rem;
+    min-width: 75vw !important;
+    max-width: 75vw !important;
+    min-height: calc(75vw/0.75) !important;
+    max-height: calc(75vw/0.75) !important;
   }
   
   .carousel_next > :global(.svg-inline--fa) {
@@ -68,10 +138,6 @@
 }
 
 @media screen and (min-width: 577px) {
-  .card {
-    margin: 0 0.5rem;
-  }
-
   .carousel_next,
   .carousel_prev {
     height: calc(40.92vw + 4rem);
@@ -79,17 +145,17 @@
 }
 
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .card {
-    min-width: 80vw !important;
-    max-width: 80vw !important;
-    min-height: 95vw !important;
-    max-height: 95vw !important;
+    min-width: 75vw !important;
+    max-width: 75vw !important;
+    min-height: calc(75vw/0.75) !important;
+    max-height: calc(75vw/0.75) !important;
   }
-
+  
   .carousel_next,
   .carousel_prev {
-    height: calc(95vw + 4rem);
+    height: calc(80vh + 4rem);
   }
 
   .carousel_next > :global(.svg-inline--fa),
@@ -97,12 +163,12 @@
     width: 100%;
   }
 
-  .inner {
-    height: calc(95vw + 30px);
+  .inner :global(.slider-wrapper) {
+    height: calc(75vw/0.75 + 75px);
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .card {
     width: 25vw !important;
     height: 34.1vw !important;
@@ -111,7 +177,7 @@
   .bullets,
   .carousel_next,
   .carousel_prev {
-    height: calc(34.1vw + 4rem);
+    height: calc(34.1vw + 80px);
   }
 
   .carousel_next > :global(.svg-inline--fa),
@@ -120,7 +186,20 @@
   }
 
   .inner {
-    height: calc(34.1vw + 30px);
+    height: calc(34.1vw + 100px);
+  }
+
+  .inner > :global(.carousel) > :global(.control-dots) {
+    bottom: 10px;
+  }
+
+  .inner > :global(.carousel) :global(.slide) {
+    background: transparent;
+    min-width: 26vw !important;
+  }
+
+  .inner :global(.slider-wrapper) {
+    height: calc(34.1vw + 55px);
   }
 }
 

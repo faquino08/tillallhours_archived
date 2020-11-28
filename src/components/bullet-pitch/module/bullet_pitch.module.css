@@ -1,9 +1,9 @@
 .bullets {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 100%;
     max-width: 2000px;
-    background-color: #ececec;
+    background-color: #faf9f9;
 }
 
 .row {

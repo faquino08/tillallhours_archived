@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useLayoutEffect, useEffect, useRef, useState } from "react"
 //import { Link } from "gatsby"
 import Layout from "../components/layout"
 //import Image from "../components/image"
@@ -16,6 +16,8 @@ import { animated, useSpring } from "react-spring"
 import styles from "./index.module.css"
 //import { layoutGenerator } from "react-break"
 import { handleScroll, parallaxMultiplier } from "../services/scroll.js"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
 const IndexPage = ({ location }) => {
   const containerRef = useRef(null);
@@ -24,12 +26,12 @@ const IndexPage = ({ location }) => {
   const [paraMulti, setMulti] = useState(0.1);
   const path = location.pathname
 
-  useEffect(() => {
-    window.addEventListener("scroll", function() {
-      handleScroll(containerRef, "parallax", 0, setPara)
-    });
+  useLayoutEffect(() => {
     window.addEventListener("resize", function() {
       parallaxMultiplier(containerRef, footerRef, setMulti)
+    })
+    window.addEventListener("scroll", function() {
+      handleScroll(containerRef, "parallax", 0, setPara)
     });
 
     if (document.readyState === "complete") {
@@ -45,7 +47,7 @@ const IndexPage = ({ location }) => {
       }
     }
 
-    return async () => {
+    return () => {
       window.removeEventListener("resize", function() {
         parallaxMultiplier(containerRef, footerRef, setMulti)
       })
@@ -80,13 +82,72 @@ const IndexPage = ({ location }) => {
           <BulletPitch />
           <FeaturedProducts />
           <Short_About2 />
-          {/*<Short_Classes2 />*/}
         </animated.div>
         <div className={styles.bottom} ref={footerRef}>
           {/*<Contact_Form2 />*/}
           <footer>
             <div className="footing">
-              © {new Date().getFullYear()}, tillallhours Candle Co.
+              <Row>
+                <div
+                  style={{
+                    width: "100%",
+                    justifyContent: "center",
+                    display: "grid",
+                  }}
+                >
+                  <p
+                    style={{
+                      marginBottom: "0.75rem",
+                      marginTop: "0.75rem",
+                      fontSize: "1.25em"
+                    }}
+                  >
+                    Contact Us:
+                  </p>
+                  <div>
+                    <a
+                      href="http://instagram.com/tillallhours"
+                      style={{
+                        color: "white",
+                        marginLeft: "0.3em",
+                        marginRight: "0.3em",
+                      }}
+                    >
+                      <i className="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a
+                      href="https://www.pinterest.com/tillallhours"
+                      style={{
+                        color: "white",
+                        marginLeft: "0.3em",
+                        marginRight: "0.3em",
+                      }}
+                    >
+                      <i className="fab fa-pinterest fa-lg"></i>
+                    </a>
+                    <a
+                      href="mailto: info@tillallhours.com"
+                      style={{
+                        color: "white",
+                        marginLeft: "0.3em",
+                        marginRight: "0.3em",
+                      }}
+                    >
+                      <i className="fas fa-envelope fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    width: "100%",
+                    justifyContent: "center",
+                    display: "flex",
+                    marginTop: "0.75rem",
+                  }}
+                >
+                  © {new Date().getFullYear()}, tillallhours Candle Co.
+                </div>
+              </Row>
             </div>
           </footer>
         </div>

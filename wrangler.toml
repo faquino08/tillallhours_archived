@@ -1,0 +1,10 @@
+name = "tillallhours"
+type = "webpack"
+account_id = "c4e6cdcab439d708e772ca17a3e16cbb"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./public"
+entry-point = "workers-site"

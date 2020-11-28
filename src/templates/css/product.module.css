@@ -1,8 +1,91 @@
-.descSection {
-    box-sizing: border-box;
-    padding-top: 24px;
-    border-top: 1px solid rgb(216, 211, 200);
-    margin-top: 24px;
+.mainSection {
+    max-width: 1200px;
+    margin: auto !important;
+}
+
+:global(.card-body) h3 {
+    font-size: 1.75rem;
+}
+
+:global(.card-body) h4 {
+    font-size: 1.5rem;
+}
+
+:global(.card-body) h6 {
+    font-size: 1.10rem;
+}
+
+.descSection h3 {
+    margin-bottom: 0.25rem;
+}
+
+.descSection h5 {
+    margin-bottom: 0.2rem;
+    font-size: 1.25rem;
+}
+
+.descSection h6 {
+    margin-bottom: 0.125rem;
+}
+
+.descSection p {
+    margin-bottom: 0.95rem;
+}
+
+.acc0 h3 {
+    margin-bottom: 0.25rem;
+}
+
+.acc0 h5 {
+    font-size: 1.25rem;
+}
+
+.acc0 h6 {
+    margin-bottom: 0.125rem;
+}
+
+.acc0 p {
+    margin-bottom: 0.95rem;
+}
+
+.acc1 h3 {
+    margin-bottom: 0.25rem;
+}
+
+.acc1 h5 {
+    margin-bottom: 0.2rem;
+    font-size: 1.25rem;
+}
+
+.acc1 h6 {
+    margin-bottom: 0.125rem;
+}
+
+.acc1 p {
+    margin-bottom: 0.95rem;
+}
+
+.acc2 h3 {
+    margin-bottom: 0.25rem;
+}
+
+.acc2 h5 {
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+}
+
+.acc2 h6 {
+    margin-bottom: 0.125rem;
+}
+
+.acc2 p {
+    margin-bottom: 0.95rem;
+}
+
+@media screen and (max-width: 767px) {
+    .infoSection {
+        padding: 12px 0 !important;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -12,7 +95,7 @@
     }
 
     .infoSection {
-        padding: 0px 36px !important;
+        padding: 12px 36px !important;
     }
 
     .imageSection {
@@ -68,4 +151,8 @@
 
 .accordionBtn {
     width: 100% !important;
+}
+
+:global(.carousel) :global(.control-dots) :global(.dot) {
+    background-color: rgb(156, 155, 154);
 }

@@ -1,12 +1,13 @@
 .parallax {
     position: relative;
-    z-index: 1000;
-    background-color: white;
+    z-index: 6;
+    background-color: #faf9f9;
+    width: 100%;
 }
 
 .bottom {
     position: fixed;
     bottom: 0;
-    z-index: 5;
+    z-index: 1;
     width: 100%;
 }

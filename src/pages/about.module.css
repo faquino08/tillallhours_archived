@@ -5,6 +5,23 @@
     height: 96px;
 }
 
+@media (max-width:991px) {
+    .p_1 p {
+        margin-bottom: 0 !important;
+    }
+
+    aboutImage {
+        width: "60vw";
+        height: "100%";
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rowM:last-of-type {
+        margin-bottom: 1.45rem !important;
+    }
+}
+
 @media (min-width:576px) {
     .cont {
         padding: 0 2rem !important;
@@ -19,34 +36,21 @@
     width: 100%;
     color: black;
     font-size: 21px;
-    margin-bottom: 2rem;
+    height: 100%;
 }
 
 .p_2 {
     width: 100%;
     color: black;
-    font-size: 1.5em;
-    margin-bottom: 2rem;
+    font-size: 21px;
     border: dashed 1px white;
-    height: 100%;
-}
-
-.p_3 {
-    width: 100%;
-    height: 40vh;
-    color: white;
     text-align: center;
-}
-
-.p_3 p {
-    font-size: 2em;
 }
 
 .p_2 p {
-    position: relative;
-    top: 50%;
-    left: auto;
-    text-align: center;
+    margin-bottom: 0 !important;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .rowM {
@@ -72,4 +76,34 @@
   height: 100%;
   background-color: black;
   opacity: 35%;
+}
+
+.cont {
+    max-width: 1200px;
+    margin: auto !important;
+}
+
+:global(.footing) {
+    max-width: 1200px;
+    margin: auto !important;
+}
+
+:global(footer) {
+    background-color: black;
+}
+
+.rowM > div > .p_1 {
+    display: table !important;
+}
+
+.rowM > div > .p_1 > p {
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+
+aboutImage {
+    width: "25vw";
+    height: "100%";
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -19,13 +19,11 @@
     display: none;
 }
 
-:global(.carousel-item):local(.hero1) {
-    height: 110vh;
-    background-image: url("../../../images/IMG_8459.jpeg");
+.hero1 {
+    height: 100%;
+    width: 100%;
     background-size: cover;
-    background-position: center left 50%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 :global(.carousel-item):local(.hero2) {
@@ -53,19 +51,36 @@
         left: 0 !important;
         right: 0 !important;
     }
+
     main:global > .carousel:global {
-      top: calc(-60px - 1rem);
-      margin-bottom: calc(-60px - 1rem);
+      top: 0;
       position: relative;
-      z-index: 10;
+      z-index: 5;
+    }
+
+    :global(.carousel-item) {
+        height: calc(95vh);
+        padding-bottom: calc(-60px - 1rem) !important;
+    }
+
+    .hero1 {
+        background-attachment: scroll !important;
     }
 }
  
 @media screen and (min-width: 768px) {
     main:global > .carousel:global  {
-      top: calc(-62px - 2.25rem);
-      margin-bottom: calc(-62px - 2.25rem);
+      top: 0;
       position: relative;
-      z-index: 10;
+      z-index: 5;
+    }
+
+    :global(.carousel-item) {
+        height: calc(95vh);
+        padding-bottom: calc(-62px - 2.25rem) !important;
+    }
+
+    .hero1 {
+        background-attachment: fixed !important;
     }
 }
