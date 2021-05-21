@@ -8,7 +8,7 @@
 import React, {useState, } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Helmet from "react-helmet"
 //import Header from "./header/header"
 import Header2 from "./header/header"
 import "./layout.css"
@@ -28,6 +28,19 @@ function Layout({ children, loc }) {
   if (loc == "/") {
     return (
       <>
+        <Helmet>
+          <script
+            type="text/javascript"
+            src="https://cdn1.stamped.io/files/widget.min.js"
+          ></script>
+          <script type="text/javascript">
+            {`
+              <![CDATA[
+                StampedFn.init({ apiKey: process.env.STAMPED_PUB_KEY, storeUrl: process.env.STAMPED_URL }) 
+              ]]>
+            `}
+          </script>
+        </Helmet>
         <Header2 home={true} />
         <main>{children}</main>
       </>
@@ -35,6 +48,19 @@ function Layout({ children, loc }) {
   } else {
     return (
       <>
+        <Helmet>
+          <script
+            type="text/javascript"
+            src="https://cdn1.stamped.io/files/widget.min.js"
+          ></script>
+          <script type="text/javascript">
+            {`
+              <![CDATA[
+                StampedFn.init({ apiKey: process.env.STAMPED_PUB_KEY, storeUrl: process.env.STAMPED_URL }) 
+              ]]>
+            `}
+          </script>
+        </Helmet>
         <Header2 home={false} />
         <main className="nonHomeMain">{children}</main>
       </>

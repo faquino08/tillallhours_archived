@@ -19,6 +19,13 @@ exports.sourceNodes = async ({
     )
 }
 
+const activeEnv = 
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+});
+
 /** exports.createPages = async ({ actions: { createPage } }) => {
     const allProducts = ['candle 1', 'candle 2 large', 'candle 2 small'];
     
@@ -551,7 +558,7 @@ exports.onPostBuild = async ({ graphql }) => {
         const data = {
           id: `${node.id}-${node.sizes[j].size_id}`,
           price: node.sizes[j].price,
-          url: `https://tillallhours.com/products/${node.sizes[j].slug}.json`,
+          url: `https://${process.env.BASE_DOMAIN}/products/${node.sizes[j].slug}.json`,
           dimensions: {
             weight: node.sizes[j].weight,
           },

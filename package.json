@@ -5,9 +5,9 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@cloudflare/wrangler": "^1.11.0",
+    "@cloudflare/wrangler": "^1.15.0",
     "@material-ui/core": "^4.11.0",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.24.84",

@@ -1,8 +1,19 @@
+const activeEnv = 
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+
+console.log(`Using environment config: '${activeEnv}'`);
+
+const dotenv = require("dotenv");
+dotenv.config({
+  path: `.env.${activeEnv}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `tillallhours`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `tillallhours `,
+    author: `tillallhours`,
+    baseUrl: process.env.BASE_DOMAIN,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,8 +48,7 @@ module.exports = {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
         version: "3.0.15",
-        publicApiKey:
-          "ZTljNGRlMjEtYTMyNS00YmJkLWI4MWEtYmZiMTIwNmQ4M2MxNjM3MzM2NzA4NjYxNTE0MjE1", // use public api key here or in environment variable
+        publicApiKey: process.env.SNIP_API_KEY, // use public api key here or in environment variable
         defaultLang: "en",
         currency: "usd",
         openCartOnAdd: true,

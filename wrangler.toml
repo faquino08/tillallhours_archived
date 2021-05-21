@@ -1,9 +1,13 @@
 name = "tillallhours"
 type = "webpack"
 account_id = "c4e6cdcab439d708e772ca17a3e16cbb"
+
+[env.staging]
 workers_dev = true
-route = ""
-zone_id = ""
+
+[env.production]
+routes = ["tillallhours.com/*","*.tillallhours.com/*"]
+zone_id = "4517baee2b631765c845d64d380271dd"
 
 [site]
 bucket = "./public"

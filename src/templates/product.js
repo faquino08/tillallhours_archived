@@ -187,7 +187,7 @@ export default function ProductPage({ location, data }) {
         data-item-id={`${product.edges[0].node.id}-${productOptions.size}`}
         data-item-name={product.edges[0].node.name}
         data-item-price={parseFloat(printPrice(data)[0])}
-        data-item-url={`https://tillallhours.com/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
+        data-item-url={`https://${data.site.siteMetadata.baseUrl}/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
         data-item-weight={productOptions.weight}
         data-item-custom1-name="Size"
         data-item-custom1-options={printSnipOptions(
@@ -224,7 +224,7 @@ export default function ProductPage({ location, data }) {
         data-item-id={`${product.edges[0].node.id}-${productOptions.size}`}
         data-item-name={product.edges[0].node.name}
         data-item-price={parseFloat(printPrice(data)[0])}
-        data-item-url={`https://tillallhours.com/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
+        data-item-url={`https://${data.site.siteMetadata.baseUrl}/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
         data-item-weight={productOptions.weight}
         data-item-custom1-name="Size"
         data-item-custom1-options={printSnipOptions(
@@ -697,7 +697,10 @@ export default function ProductPage({ location, data }) {
 
   return (
     <Layout>
-      <SEO title={`${product.edges[0].node.name}`} author="tillallhours Candle Co." />
+      <SEO
+        title={`${product.edges[0].node.name}`}
+        author="tillallhours Candle Co."
+      />
       <Row style={{ width: `100%`, margin: 0 }} className={styles.mainSection}>
         <Col md={6} xs={12} className={styles.imageSection}>
           <Carousel
@@ -734,6 +737,15 @@ export default function ProductPage({ location, data }) {
           <p className={styles.collName}>
             {data.allCollections.edges[0].node.name}
           </p>
+          <div
+            id="stamped-main-widget"
+            data-product-id={`${product.edges[0].node.id}-${productOptions.size}`}
+            data-name={product.edges[0].node.name}
+            data-url={`${data.site.siteMetadata.baseUrl}/products/${product.edges[0].node.slug}/size=${productOptions.size}.json`}
+            data-image-url={data.allImageSharp.nodes[0].fluid}
+            data-description={scentDescriptions}
+            data-product-sku={`${product.edges[0].node.slug}-${productOptions.size}`}
+          />
           <h5>
             ${printPriceJson(data, data.allProduct)[`${productOptions.size}`]}
           </h5>
@@ -905,6 +917,11 @@ export default function ProductPage({ location, data }) {
 
 export const query = graphql`
          query($id: String!, $collection: String!) {
+           site {
+             siteMetadata {
+               baseUrl
+             }
+           }
            allProduct(filter: { id: { eq: $id } }) {
              edges {
                node {
