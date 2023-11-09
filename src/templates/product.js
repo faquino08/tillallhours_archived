@@ -324,7 +324,7 @@ export default function ProductPage({ location, data }) {
             if (genImages.length === 1 || genImages.length === 0) {
                 if (
                   data.allAlternativeProductImages.edges[h].node.image_2
-                    .childImageSharp.fluid !== undefined
+                    !== null
                 ) {
                   productImages.push(
                     <div style={{ width: `100%` }}>
@@ -362,7 +362,7 @@ export default function ProductPage({ location, data }) {
               if (j === 2) {
                 if (
                   data.allAlternativeProductImages.edges[h].node.image_3
-                    .childImageSharp.fluid !== undefined
+                    !== null
                 ) {
                   productImages.push(
                     <div style={{ width: `100%` }}>
@@ -381,7 +381,7 @@ export default function ProductPage({ location, data }) {
               if (j === 2) {
                 if (
                   data.allAlternativeProductImages.edges[h].node.image_2
-                    .childImageSharp.fluid !== undefined
+                    !== null
                 ) {
                   productImages.push(
                     <div style={{ width: `100%` }}>
@@ -398,7 +398,7 @@ export default function ProductPage({ location, data }) {
               } else if (j === 3) {
                 if (
                   data.allAlternativeProductImages.edges[h].node.image_3
-                    .childImageSharp.fluid !== undefined
+                    !== null
                 ) {
                   productImages.push(
                     <div style={{ width: `100%` }}>

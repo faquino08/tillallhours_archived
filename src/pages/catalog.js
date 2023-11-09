@@ -170,7 +170,7 @@ function CatalogPage() {
         <SEO title="The Catalog" author="tillallhours Candle Co." />
         <Banner
           title="The Catalog"
-          imageData={data.allCatalogPage.nodes[9].image_1.childImageSharp.fluid}
+          imageData={data.allCatalogPage.nodes[8].image_1.childImageSharp.fluid}
           pct={85}
           back={"gray"}
           height={37.5}
@@ -451,7 +451,10 @@ function generateCollectionProductCards(collection) {
     var id = node.id
     var label = node.label_color
     var name = node.name
+    console.log(node)
     node.sizes.forEach(size => {
+      console.log('Images')
+      console.log(size.images)
       productCards.push(
         <Link to={`/${size.slug}`}>
           <Card className={styles.card} key={id}>

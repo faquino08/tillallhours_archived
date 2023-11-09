@@ -14,8 +14,8 @@ exports.sourceNodes = async ({
     createContentDigest,
 }) => {
     const result = await fetch(
-      `http://cms.quoainfrank.com/tillallhours/items/testproduct`,
-      { headers: { Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu" } }
+      `http://10.6.47.11:8080/tillallhours/items/testproduct`,
+      { headers: { Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me" } }
     )
 }
 

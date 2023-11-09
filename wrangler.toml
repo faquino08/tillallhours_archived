@@ -1,13 +1,13 @@
 name = "tillallhours"
 type = "webpack"
-account_id = "c4e6cdcab439d708e772ca17a3e16cbb"
+# account_id = INSERT THE ACCT ID FOR CLOUDFLARE WORKERS ACCT
 
 [env.staging]
 workers_dev = true
 
 [env.production]
 routes = ["tillallhours.com/*","*.tillallhours.com/*"]
-zone_id = "4517baee2b631765c845d64d380271dd"
+# zone_id = INSERT THE ZONE ID FOR CLOUDFLARE WORKERS ACCT
 
 [site]
 bucket = "./public"

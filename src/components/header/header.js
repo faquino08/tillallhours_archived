@@ -140,14 +140,14 @@ function Header(props) {
               style={brandAnimation}
             >
               <animated.svg
-                xmlnsDc="http://purl.org/dc/elements/1.1/"
-                xmlnsCc="http://creativecommons.org/ns#"
-                xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlnsSvg="http://www.w3.org/2000/svg"
+                xmlnsdc="http://purl.org/dc/elements/1.1/"
+                xmlnscc="http://creativecommons.org/ns#"
+                xmlnsrdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlnssvg="http://www.w3.org/2000/svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="243.9323"
                 height="29.270834"
-                viewBox="0 0 64.540419 7.7445751"
+                viewbox="0 0 64.540419 7.7445751"
                 version="1.1"
                 id="svg8"
                 style={logoAnimation}

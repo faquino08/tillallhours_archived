@@ -1,6 +1,5 @@
 const activeEnv = 
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
-
 console.log(`Using environment config: '${activeEnv}'`);
 
 const dotenv = require("dotenv");
@@ -41,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-source-cms`,
       options: {
-        dest: "http://cms.quoainfrank.com",
+        dest: "http://10.6.47.11:8080",
       },
     },
     {

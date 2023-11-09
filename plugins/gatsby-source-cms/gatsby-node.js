@@ -16,7 +16,7 @@ exports.sourceNodes = async (
          `${apiSite}/tillallhours/items/product`,
          {
            headers: {
-             Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+             Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
            },
          }
        )
@@ -25,7 +25,7 @@ exports.sourceNodes = async (
          `${apiSite}/tillallhours/items/homepage`,
          {
            headers: {
-             Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+             Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
            },
          }
        )
@@ -34,7 +34,7 @@ exports.sourceNodes = async (
          `${apiSite}/tillallhours/items/about_page`,
          {
            headers: {
-             Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+             Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
            },
          }
        )
@@ -43,7 +43,7 @@ exports.sourceNodes = async (
          `${apiSite}/tillallhours/items/product_page`,
          {
            headers: {
-             Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+             Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
            },
          }
        )
@@ -52,16 +52,16 @@ exports.sourceNodes = async (
           `${apiSite}/tillallhours/items/catalog_page`,
           {
             headers: {
-              Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+              Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
             },
           }
         )
 
        const collectionsResponse = await fetch(
-         `${apiSite}/tillallhours/items/collections?fields=id,name,available_vessel_color,scents.scent,sizes.sizes_id.id,sizes.sizes_id.weight`,
+         `${apiSite}/tillallhours/items/collections?fields=id,name,available_vessel_color,scents.scents_id.name,sizes.sizes_id.id,sizes.sizes_id.weight`,
          {
            headers: {
-             Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+             Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
            },
          }
        )
@@ -70,7 +70,7 @@ exports.sourceNodes = async (
          `${apiSite}/tillallhours/items/price_table?fields=id,size,price`,
          {
            headers: {
-             Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+             Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
            },
          }
        )
@@ -79,7 +79,7 @@ exports.sourceNodes = async (
           `${apiSite}/tillallhours/items/scents?fields=id,name,scent_description,description`,
           {
             headers: {
-              Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+              Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
             },
           }
         )
@@ -88,7 +88,7 @@ exports.sourceNodes = async (
           `${apiSite}/tillallhours/items/sizes?fields=id,name,size,weight`,
           {
             headers: {
-              Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+              Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
             },
           }
         )
@@ -97,7 +97,7 @@ exports.sourceNodes = async (
           `${apiSite}/tillallhours/items/generic_product_images?fields=id,name,image_1,size,vessel_color,collections.collections_id,position`,
           {
             headers: {
-              Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+              Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
             },
           }
         )
@@ -106,7 +106,7 @@ exports.sourceNodes = async (
           `${apiSite}/tillallhours/items/alternative_product_images?fields=id,image_1,image_2,image_3,image_4,size,color,related_product`,
           {
             headers: {
-              Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+              Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
             },
           }
         )
@@ -183,7 +183,7 @@ exports.sourceNodes = async (
                    `${apiSite}/tillallhours/files/${file_id}`,
                    {
                      headers: {
-                       Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+                       Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
                      },
                    }
                  )
@@ -262,7 +262,7 @@ exports.sourceNodes = async (
                     `${apiSite}/tillallhours/files/${file_id}`,
                     {
                         headers: {
-                            Authorization: "Bearer bVqj8NFJjQfotteKTR2i6POu",
+                            Authorization: "Bearer ksiqPmdlpezgFTuo6dSvR4me",
                         },
                     }
                 )
