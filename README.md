@@ -8,7 +8,14 @@
         </div>
     </a>
 </h1>
+
 This was an e-commerce site that was deployed in November of 2020. It was in operation until approximately 2022. 
+
+<h3 align="center"> 
+    <a href="https://faquino08.github.io/" >
+        Demo
+    </a>
+</h3>
 
 ## Project Goals 
 This site was meant to provide a place for receiving and managing orders for a made-to-order soy candle business. 
