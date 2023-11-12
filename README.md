@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1 align="center" style="background-color:#ffff">
     <a href="https://faquino08.github.io/" >
         <div width="100%">
             <img alt="Gatsby" src="./src/images/tillallhours-logo-web.svg" width="75%" style="margin-bottom:0;padding-bottom:0"/>
