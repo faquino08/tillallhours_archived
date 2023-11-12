@@ -1,10 +1,7 @@
-<h1 align="center" style="background-color:#ffff">
+<h1 align="center">
     <a href="https://faquino08.github.io/" >
         <div width="100%">
-            <img alt="Gatsby" src="./src/images/tillallhours-logo-web.svg" width="75%" style="margin-bottom:0;padding-bottom:0"/>
-        </div>
-        <div width="100%" style="position:relative;right:-30%;">
-            <img src="./src/images/tillallhours-logo-web_copy.svg-text59-878.png" width="10%"/>
+            <img alt="Gatsby" src="./src/images/logo-README.svg" width="75%" style="margin-bottom:0;padding-bottom:0"/>
         </div>
     </a>
 </h1>
